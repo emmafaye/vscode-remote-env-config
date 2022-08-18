@@ -32,12 +32,12 @@ This is meant to be a plug-and-play env for each project, I'd recommend forking 
 
 Requires [GH CLI](https://cli.github.com/)
 ```bash
-gh repo fork https://github.com/emmafaye/vscode-remote-env-config.git --clone
+gh repo fork https://github.com/emmafaye/vscode-remote-env-config.git --clone --fork-name <repo-project-name>
 ```
 
 **Clone Method**
 ```bash
-git clone https://github.com/emmafaye/vscode-remote-env-config.git
+git clone https://github.com/emmafaye/vscode-remote-env-config.git <project-name>
 ```
 
 ## Running Environment
