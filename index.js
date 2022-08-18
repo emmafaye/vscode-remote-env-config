@@ -1,0 +1,1 @@
+console.log(`👋 Welcome, $(process.env.USER). You're ready to get started coding on your project!`);
