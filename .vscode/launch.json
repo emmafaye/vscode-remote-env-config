@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Chrome Canary",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            // "sourceMapPathOverrides": {
+            //     "webpack:///src/*": "${webRoot}/*"
+            // },
+            "runtimeExecutable": "canary",
+            // "resolveSourceMapLocations": null,
+            // "runtimeExecutable": "${env.USERPROFILE}/AppData/Local/Google/Chrome SxS/Application/chrome.exe",
+            // "runtimeExecutable": "C:\\Users\\emzfa\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe",
+            // "runtimeArgs": ["--new-window", "--remote-debugging-port=9223"]
+        }
+    ]
+}

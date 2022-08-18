@@ -1,0 +1,119 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        // {
+        //     "label": "Start",
+        //     "dependsOrder": "sequence",
+        //     "dependsOn": ["Server", "Client"],
+        //     "icon": {
+        //         "id": "debug-start",
+        //         "color": "terminal.ansiGreen"
+        //     },
+        //     "options": {
+        //         "statusbar": {
+        //             "label": "$(debug-start) Start",
+        //             "color": "#02ff89",
+        //             "tooltip": "Run NodeJS Client & Server"
+        //         }
+        //     }
+        // },
+        // {
+        //     "label": "Server",
+        //     "type": "shell",
+        //     "isBackground": true,
+        //     "command": "npm start",
+        //     "icon": {
+        //         "id": "cloud",
+        //         "color": "terminal.ansiCyan"
+        //     },
+        //     "options": {
+        //         "statusbar": {
+        //             "label": "$(cloud) Server",
+        //             "color": "#02afff",
+        //             "tooltip": "Run NodeJS Server "
+        //         }
+        //     }
+        // },
+        // {
+        //     "label": "Client",
+        //     "type": "shell",
+        //     "command": "npm run client",
+        //     "icon": {
+        //         "id": "person-add",
+        //         "color": "terminal.ansiYellow"
+        //     },
+        //     "options": {
+        //         "statusbar": {
+        //             "label": "$(person-add) Client",
+        //             "color": "#ffc402",
+        //             "tooltip": "Run Client"
+        //         }
+        //     }
+        // },
+        {
+            "label": "Rebuild Container",
+            "type": "shell",
+            "command": "${input:rebuildContainer}",
+            "icon": {
+                "id": "refresh",
+                "color": "terminal.ansiRed"
+            },
+            "options": {
+                "statusbar": {
+                    "label": "$(refresh) Rebuild Container",
+                    "color": "#02ff89",
+                    "tooltip": "Rebuild Container"
+                }
+            }
+        },
+        {
+            "label": "Zen Mode",
+            "type": "shell",
+            "command": "${input:zenMode}",
+            "icon": {
+                "id": "eye",
+                "color": "terminal.ansiCyan"
+            },
+            "options": {
+                "statusbar": {
+                    "label": "$(eye) Zen Mode",
+                    "color": "#00ccff",
+                    "tooltip": "Toggle Zen Mode"
+                }
+            }
+        }
+    ],
+    // List of VS Code Commands - https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
+    "inputs": [
+        {
+            "type": "command",
+            "id": "rebuildContainer",
+            "command": "remote-containers.rebuildContainer",
+        },
+        {
+            "type": "command",
+            "id": "zenMode",
+            "command": "workbench.action.toggleZenMode",
+        },
+        {
+            "type": "command",
+            "id": "example",
+            "command": "shell-command.run",
+            "args": {
+                "cmd": "ls",
+                "args": [
+                    "-1",
+                ],
+                "env": {
+                    "SOME_ENV_VAR": "SOME_ENV_VAR_VALUE",
+                    "ANOTHER_ENV_VAR": "ANOTHER_ENV_VAR_VALUE"
+                },
+                "cwd": "/",
+                "capture": "stdout",
+                "quickPick": "true"
+            }
+        }
+    ]
+}

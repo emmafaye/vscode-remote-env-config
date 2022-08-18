@@ -1,0 +1,7 @@
+{
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+    },
+    "ignorePatterns": ["node_modules", "**/vendor/*.js", "**/*.spec.js", "**/*.test.js"]
+}
