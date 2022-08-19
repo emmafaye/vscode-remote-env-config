@@ -90,7 +90,8 @@
         },
         "files.associations": {
             "*.env.local": "dotenv",
-            "*.env.template": "dotenv"
+            "*.env.template": "dotenv",
+            ".gitconfig.template": "properties"
         },
 
         // Extension Configuration

@@ -2,7 +2,7 @@
 
 This is an opinionated environment configuration for VSCode and Docker. It utilizes some of VSCode's built-in functionality (`.devcontainer/devcontainer.json`) to create a headless Alpine Linux development environment for you to use on any OS. This means you can play with any tool you can use in an Unix-based OS. This configuration is mostly geared toward Windows, but could be adapted to any OS and has some configuration for Mac and Linux already.
 
-I make some assumption you want to use NodeJS and NPM, but this could be configured at your lesiure. Later I may provide a CLI to configure this on the fly, but for now it's a manual configuration. It includes some of my preferred extensions, themes and icons.
+I make some assumptions you want to use NodeJS and NPM, but this could be configured at your lesiure. Later I may provide a CLI to configure this on the fly, but for now it's a manual configuration. It includes some of my preferred extensions, themes and icons.
 
 ![IDE Preview](https://i.imgur.com/vqDvNJY.png)
 
@@ -26,7 +26,13 @@ I make some assumption you want to use NodeJS and NPM, but this could be configu
 -   [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 -   [VS Code](https://code.visualstudio.com/)
 
-This is meant to be a plug-and-play env for each project, I'd recommend forking the repo with GitHub CLI or you can just clone it per normal in git.
+This is meant to be a plug-and-play env for each project, you can fork the repo with GitHub CLI or you can just clone it per normal in git.
+
+**Clone Method**
+
+```bash
+git clone --recurse-submodules https://github.com/emmafaye/vscode-remote-env-config.git <project-name>
+```
 
 **Fork Method**
 
@@ -34,12 +40,6 @@ _<sub>Note: requires [GH CLI](https://cli.github.com/)</sub>_
 
 ```bash
 gh repo fork https://github.com/emmafaye/vscode-remote-env-config.git --clone --fork-name <repo-project-name>
-```
-
-**Clone Method**
-
-```bash
-git clone https://github.com/emmafaye/vscode-remote-env-config.git <project-name>
 ```
 
 ## Running Environment

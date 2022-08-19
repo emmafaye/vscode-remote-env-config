@@ -6,7 +6,6 @@ ENV NPM_PATH=/usr/local/lib/node_modules
 ENV ZSH_CUSTOM=${HOME_PATH}/.oh-my-zsh/custom
 ENV NVIM_PATH=${HOME_PATH}/.config/nvim
 
-ENV GITHUB_USERNAME=emmafaye
 ENV BAT_THEME=Dracula
 ENV DOCKER_CONTENT_TRUST=true
 
@@ -31,6 +30,7 @@ RUN ln -sf ${WORK_PATH}/.devcontainer/nvim/init.lua ${HOME_PATH}/init.lua
 RUN ln -sf ${WORK_PATH}/.devcontainer/nvim/chadrc.lua ${HOME_PATH}/chadrc.lua
 RUN ln -sf ${WORK_PATH}/.devcontainer/misc/.tldrrc ${HOME_PATH}/.tldrrc
 RUN ln -sf ${WORK_PATH}/.devcontainer/misc/.tmux.conf ${HOME_PATH}/.tmux.conf
+RUN cp -n ${WORK_PATH}/.devcontainer/misc/.gitconfig.template ${WORK_PATH}/.devcontainer/misc/.gitconfig
 RUN ln -sf ${WORK_PATH}/.devcontainer/misc/.gitconfig ${HOME_PATH}/.gitconfig
 
 # Node Toolchain
