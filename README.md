@@ -44,7 +44,13 @@ gh repo fork https://github.com/emmafaye/vscode-remote-env-config.git --clone --
 
 ## Running Environment
 
-Once you have the repo folder openned in VS Code, open the folder in a container. This will build the container and install all the extensions and settings.
+Once you have the repo folder openned in VS Code, complete the below steps. This will build the container and install all the extensions and settings.
+
+1. Copy the `.env.template` file to `.env` and fill in the values
+2. Open the Command Palette (Ctrl+Shift+P) ➝ File: Open Workspace from File..
+3. Open the Command Palette (Ctrl+Shift+P) ➝ Remote-Containers: Open Folder in Container...
+4. Wait for the container to build and install all the extensions and settings
+5. ✅ Done! You can now start coding!
 
 ## Environment Variables
 
