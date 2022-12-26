@@ -22,20 +22,10 @@
         "command": "cursorHome",
         "when": "textInputFocus"
     },
-    {
-        "key": "home",
-        "command": "-cursorHome",
-        "when": "textInputFocus"
-    },
     // Select to beginning of line
     {
         "key": "shift+alt+left",
         "command": "cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+home",
-        "command": "-cursorHomeSelect",
         "when": "textInputFocus"
     },
 
@@ -45,20 +35,10 @@
         "command": "cursorEnd",
         "when": "textInputFocus"
     },
-    {
-        "key": "end",
-        "command": "-cursorEnd",
-        "when": "textInputFocus"
-    },
     // Select to end of line
     {
         "key": "shift+alt+right",
         "command": "cursorEndSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+end",
-        "command": "-cursorEndSelect",
         "when": "textInputFocus"
     },
 
@@ -72,5 +52,17 @@
         "key": "ctrl+oem_3",
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
+    },
+
+    // Remove Default VSCode Terminal handling
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     }
 ]
